@@ -21,6 +21,12 @@ print('Output path:',outputPath)
 dirs = next(os.walk(sourcePath))[1]
 
 for path in dirs:
+	currentReadPath = validatePathName(sourcePath+path)
 	print('-->',path)
-	files = os.listdir(sourcePath+path)
-	print(files)
+	files = os.listdir(currentReadPath)
+	for file in files:
+		if (file.endswith('txt')):
+			print(file)
+			with open((currentReadPath+file), 'r') as f:
+				text=f.read()
+			print(text.split('.'))	
