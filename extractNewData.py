@@ -15,6 +15,8 @@ devOutputPath = '/home/erick/Documents/kaggle/kaggle_spooky_author_identificatio
 sourcePath = validatePathName(devInputPath if ( len(sys.argv) < 2 ) else sys.argv[1])
 outputPath = validatePathName(devOutputPath if (len(sys.argv) < 3) else sys.argv[2])
 
+authorsDict = {'poe' : 'EAP', 'lovecraft' : 'HPL' }
+
 print('Input path:',validatePathName(sourcePath))
 print('Output path:',outputPath)
 
@@ -24,9 +26,9 @@ for path in dirs:
 	currentReadPath = validatePathName(sourcePath+path)
 	print('-->',path)
 	files = os.listdir(currentReadPath)
-	for file in files:
+	for file in files[:5]:
 		if (file.endswith('txt')):
 			print(file)
 			with open((currentReadPath+file), 'r') as f:
 				text=f.read()
-			print(text.split('.'))	
+			print(text.split('.')[:4])	
