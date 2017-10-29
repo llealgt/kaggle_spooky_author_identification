@@ -1,0 +1,4 @@
+config_string,train_loss,train_accuracy,train_error,validation_loss,validation_accuracy,validation_error
+lstm_layers=1&lstm_size=512&fully_connected_layers=2&fully_connected_size=20&batch_size=512&learning_rate=0.005&lstm_dropout=0.062192151950698604&fully_connected_dropout=0.2754708018572757,1.09102,0.369140625,0.630859375,1.08608,0.400390625,0.599609375
+lstm_layers=1&lstm_size=512&fully_connected_layers=2&fully_connected_size=20&batch_size=512&learning_rate=0.005&lstm_dropout=0.5022603682841027&fully_connected_dropout=0.9275749261518049,0.000682675,1.0,0.0,1.41326,0.8056640625,0.1943359375
+lstm_layers=1&lstm_size=512&fully_connected_layers=2&fully_connected_size=20&batch_size=512&learning_rate=0.005&lstm_dropout=0.7623093938356604&fully_connected_dropout=0.24511198550118496,1.09638,0.375,0.625,1.08882,0.400390625,0.599609375
