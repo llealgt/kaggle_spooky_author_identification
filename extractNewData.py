@@ -31,13 +31,13 @@ for path in dirs:
 	print('-->' + path)
 	files = os.listdir(currentReadPath)
 
-	for file in files[:5]:
+	for file in files:
 		if (file.endswith('txt')):
 			print('|----------- ' + file)
 
 			with open((currentReadPath+file), 'r') as f:
 				text=f.read()
-			newData = text.split('.')[:4]
+			newData = text.split('.')
 			outFile = outputPath + outputFileName
 			print(outFile)
 
