@@ -32,7 +32,7 @@ outFile = outputPath + outputFileName
 
 os.remove(outFile)
 
-authorsDict = {'poe' : 'EAP', 'lovecraft' : 'HPL' }
+authorsDict = {'poe' : 'EAP', 'lovecraft' : 'HPL','shelley':'MWS' }
 
 print('Input path:',validatePathName(sourcePath))
 print('Output path:',outputPath)
