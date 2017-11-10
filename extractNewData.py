@@ -30,7 +30,8 @@ outputPath = validatePathName(devOutputPath if (len(sys.argv) < 3) else sys.argv
 
 outFile = outputPath + outputFileName
 
-os.remove(outFile)
+if os.path.exists(outFile):
+	os.remove(outFile)
 
 authorsDict = {'poe' : 'EAP', 'lovecraft' : 'HPL','shelley':'MWS' }
 
@@ -64,4 +65,3 @@ for path in dirs:
 					text = clean_line(text)
 					print(author + '###########' + text)
 					writer.writerow({'author': author, 'text': text})
-
